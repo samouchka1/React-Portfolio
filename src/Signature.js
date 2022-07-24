@@ -5,8 +5,8 @@ import {
 } from '@mui/material';
 
 const signatureStyle = {
-    color: 'rgb(56, 11, 99)',
-    padding: '2rem',
+    color: '#541b9d',
+    padding: '1.3rem',
     fontSize: '.9rem',
     textAlign: 'center'
 }
