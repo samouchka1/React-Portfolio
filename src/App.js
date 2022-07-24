@@ -8,6 +8,7 @@ import NavBar from './NavBar';
 import Welcome from './Welcome';
 import About from './About';
 import Projects from './Projects';
+import Signature from './Signature';
 
 const theme =  createTheme({
   palette: {
@@ -31,6 +32,7 @@ const App = () => {
         <Welcome />
         <About />
         <Projects />
+        <Signature />
     </ThemeProvider>
 
   );
