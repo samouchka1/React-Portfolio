@@ -7,7 +7,7 @@ import {
   Typography,
   List,
   ListItem,
-  // Link
+  Link
 } from '@mui/material';
 import { 
     // grey
@@ -72,13 +72,16 @@ const navLinksBorder = {
 }
 
 const NavBar = () => {
+
+  const hashLinks = pages.filter(hash => hash.path.includes('#'));
+  const links = pages.filter(link => link.path.includes('https'));
   
   return (
   <Container maxWidth={false} sx={{justifyContent: 'center'}}>
       <AppBar sx={navBar}>
         <Toolbar>
           <List sx={{ display: 'flex'}}>
-            {pages.map((page) => (
+            {hashLinks.map((page) => (
                 <ListItem key={page}>
                   <Typography noWrap sx={navLinksBorder}>
                       <HashLink
@@ -93,6 +96,21 @@ const NavBar = () => {
                   </Typography>
                 </ListItem>
               ))}
+            {links.map((page) => (
+              <ListItem key={page}>
+              <Typography noWrap sx={navLinksBorder}>
+                  <Link
+                    style={{textDecoration: 'none'}}
+                    href={page.path}
+                    target="_blank"
+                  >
+                    <Typography sx={navLinks}>
+                      {page.name}
+                    </Typography>
+                  </Link>
+              </Typography>
+            </ListItem>
+            ))}
           </List>
         </Toolbar>
       </AppBar>
