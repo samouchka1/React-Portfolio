@@ -3,10 +3,10 @@ import {
     Box,
     Button,
     Typography,
-    Container
+    Container,
+    Fade
 } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-// import { CSSTransition } from 'react-transition-group';
 
 const aboutContentAreaStyle = { 
     height: {
@@ -120,47 +120,47 @@ const About = () => {
     
     const AboutContent = () => {
         return (
-            <Box sx={aboutContentAreaStyle}>
-                <Box>
-                    <Button  sx={closeButtonAreaStyle}
-                        onClick={()=>{
-                            setAboutButton(true);
-                            setAboutContent(false);
-                        }}
-                    >
-                    
-                        <ArrowBackIosNewIcon sx={closeButtonStyle} />
-                    </Button>
-                </Box>
-                {/* <CSSTransition 
-                    in={showAboutContent} 
-                    timeout={4000}
-                    unmountOnExit
-                > */}
-                    <Box sx={aboutContentStyle}>
-                        <Box 
-                            component="img"
-                            src={process.env.PUBLIC_URL + 'about-image.jpg'}
-                            alt="About Me Image"
-                            sx={aboutImageStyle}    
-                        />
-                        <Typography sx={aboutContentTextStyle}>
-                            Thank you for stopping by!<br/> <br/> I like to develop functional, responsive websites. Strongly familiar with HTML, CSS, JavaScript and PHP. Experience with MySQL, MongoDB/Mongoose, Node/ExpressJS. Knowledge in ReactJS, PHP Laravel, WordPress and installing, working with frameworks and libraries. <br/>I'm always looking forward to a new project to
-                            tackle. Let me help your business grow! <br/> <br/>Professional and reliable.
-                        </Typography>
+            <Fade in={showAboutContent} timeout={650}>
+                <Box sx={aboutContentAreaStyle}>
+                    <Box>
+                        <Button  sx={closeButtonAreaStyle}
+                            onClick={()=>{
+                                setAboutButton(true);
+                                setAboutContent(false);
+                            }}
+                        >
+                        
+                            <ArrowBackIosNewIcon sx={closeButtonStyle} />
+                        </Button>
                     </Box>
-                {/* </CSSTransition> not working */}
-            </Box>
+                
+                        <Box sx={aboutContentStyle}>
+                            <Box 
+                                component="img"
+                                src={process.env.PUBLIC_URL + 'about-image.jpg'}
+                                alt="About Me Image"
+                                sx={aboutImageStyle}    
+                            />
+                            <Typography sx={aboutContentTextStyle}>
+                                Thank you for stopping by!<br/> <br/> I like to develop functional, responsive websites. Strongly familiar with HTML, CSS, JavaScript and PHP. Experience with MySQL, MongoDB/Mongoose, Node/ExpressJS. Knowledge in ReactJS, PHP Laravel, WordPress and installing, working with frameworks and libraries. <br/>I'm always looking forward to a new project to
+                                tackle. Let me help your business grow! <br/> <br/>Professional and reliable.
+                            </Typography>
+                        </Box>
+                    
+                </Box>
+            </Fade>
         )
     }
 
     return (
 
         <Container>
+            {/* <Fade in={} timeout={1500}> */}
                 <Box id="about">
                     {showAboutButton ? <AboutButton /> : null}
                     {showAboutContent ? <AboutContent /> : null}
                 </Box>
+            {/* </Fade> */}
         </Container>
     );
 };
