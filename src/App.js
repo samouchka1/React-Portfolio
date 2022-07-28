@@ -1,4 +1,9 @@
 import React from 'react';
+import { 
+  // Routes, 
+  // Route, 
+  // Navigate
+ } from 'react-router-dom';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material/styles';
 import { 
@@ -28,11 +33,11 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-        <NavBar />
-        <Welcome />
-        <About />
-        <Projects />
-        <Signature />
+      <NavBar />
+      <Welcome />
+      <About />
+      <Projects />
+      <Signature />
     </ThemeProvider>
 
   );

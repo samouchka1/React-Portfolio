@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import {
   AppBar,
   Container,
@@ -6,7 +7,7 @@ import {
   Typography,
   List,
   ListItem,
-  Link
+  // Link
 } from '@mui/material';
 import { 
     // grey
@@ -15,15 +16,15 @@ import {
 const pages = [
   {
     name: 'About',
-    path: '/about'
+    path: '#about'
   },
   {
     name: 'My Work',
-    path: '/projects'
+    path: '#projects'
   },
   {
     name: 'Contact',
-    path: '/contact'
+    path: 'https://www.upwork.com/freelancers/~01c3683d82db31cfe6'
   }
 ]
 
@@ -53,7 +54,7 @@ const navBar = {
 
 const navLinks = {
   fontWeight: '600',
-  textDecoration: 'none',
+  // textDecoration: 'none',
   color: 'white',
   fontSize : {
     xs: '1.1rem',
@@ -62,7 +63,7 @@ const navLinks = {
 }
 
 const navLinksBorder = {
-  padding: '2.2rem .5rem 2.2rem .5rem', //edit for xs
+  padding: '2.2rem .5rem 2.2rem .5rem',
   border: 'solid rgba(0, 0, 0, 0) 3px',
     '&:hover': {
       border: 'solid white 3px',
@@ -71,7 +72,7 @@ const navLinksBorder = {
 }
 
 const NavBar = () => {
-
+  
   return (
   <Container maxWidth={false} sx={{justifyContent: 'center'}}>
       <AppBar sx={navBar}>
@@ -80,12 +81,15 @@ const NavBar = () => {
             {pages.map((page) => (
                 <ListItem key={page}>
                   <Typography noWrap sx={navLinksBorder}>
-                    <Link 
-                      href={page.path}
-                      sx={navLinks}
-                    >
-                      {page.name}
-                    </Link>
+                      <HashLink
+                        style={{textDecoration: 'none'}}
+                        scroll={(element) => element.scrollIntoView({ behavior: 'smooth' })}
+                        to={page.path}
+                      >
+                        <Typography sx={navLinks}>
+                          {page.name}
+                        </Typography>
+                      </HashLink>
                   </Typography>
                 </ListItem>
               ))}
@@ -95,4 +99,5 @@ const NavBar = () => {
     </Container>
   );
 };
+
 export default NavBar;

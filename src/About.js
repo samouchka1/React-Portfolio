@@ -109,9 +109,9 @@ const About = () => {
             <Button
                 sx={aboutButtonStyle}
                 onClick={()=>{
-                    setAboutButton(false);
-                    setAboutContent(true);
-                }}
+                setAboutButton(false);
+                setAboutContent(true);
+            }}
             >
                 About Me
             </Button>
@@ -157,10 +157,10 @@ const About = () => {
     return (
 
         <Container>
-            <Box>
-                {showAboutButton ? <AboutButton /> : null}
-                {showAboutContent ? <AboutContent /> : null}
-            </Box>
+                <Box id="about">
+                    {showAboutButton ? <AboutButton /> : null}
+                    {showAboutContent ? <AboutContent /> : null}
+                </Box>
         </Container>
     );
 };

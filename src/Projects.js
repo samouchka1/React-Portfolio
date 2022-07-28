@@ -89,8 +89,7 @@ const gridItemImageStyle = {
 }
 
 return (
-
-    <Grid container sx={gridStyle}>
+    <Grid container sx={gridStyle} id="projects">
         {projects.map((project) => (
 
             <Grid item xs={8} md={3} key={project}>
@@ -109,8 +108,7 @@ return (
 
         ))}
 
-    </Grid>  
-)
-}
+    </Grid>
+)}
 
 export default Projects;
