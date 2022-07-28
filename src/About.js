@@ -17,7 +17,7 @@ const aboutContentAreaStyle = {
     fontSize: '1.3rem',
     fontFamily: 'sans-serif',
     margin: '.85rem 0 .7rem 0',
-    backgroundColor: 'rgb(10, 33, 77)', //primary - doesn't want to import -- 
+    backgroundColor: 'rgb(10, 33, 77)', //primary - doesn't want to import
     width: '100%',
 }
 
@@ -155,12 +155,10 @@ const About = () => {
     return (
 
         <Container>
-            {/* <Fade in={} timeout={1500}> */}
                 <Box id="about">
                     {showAboutButton ? <AboutButton /> : null}
                     {showAboutContent ? <AboutContent /> : null}
                 </Box>
-            {/* </Fade> */}
         </Container>
     );
 };
