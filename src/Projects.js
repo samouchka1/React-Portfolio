@@ -52,8 +52,8 @@ const projects = [
 const Projects = () => {
 
 const gridStyle = {
-    justifyContent: 'space-evenly',
-    gap: '.2rem'
+    justifyContent: 'center',
+    gap: '1.1rem'
 
 }
 
