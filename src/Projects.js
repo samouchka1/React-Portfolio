@@ -39,7 +39,7 @@ const projects = [
     },
     {
         name: 'Wordpress Site',
-        path: 'http://site2wordpress.iceiy.com/',
+        path: 'http://wordpress-site-1.great-site.net/',
         thumbnail: 'wp-1.jpg'
     },
     {
@@ -54,7 +54,6 @@ const Projects = () => {
 const gridStyle = {
     justifyContent: 'center',
     gap: '1.1rem'
-
 }
 
 const gridItemTextStyle = {
