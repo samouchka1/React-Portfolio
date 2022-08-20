@@ -4,15 +4,17 @@ import {
     Button,
     Typography,
     Container,
-    Fade
+    Fade,
+    Grid,
+    Stack
 } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const aboutContentAreaStyle = { 
     height: {
-        md: 420,
-        sm: 750,
-        xs: 850
+        md: 620,
+        sm: 1160,
+        xs: 1220
     },
     fontSize: '1.3rem',
     fontFamily: 'sans-serif',
@@ -32,11 +34,47 @@ const aboutContentStyle = {
 
 }
 
+const aboutBioStyle = {
+    width: {
+        md: '45%',
+        sm: '75%',
+        xs: '90%'   
+    },
+    textAlign: 'center',
+    margin: '0 0 1rem'
+}
+
 const aboutContentTextStyle = {
     color: 'white',
-    padding: '2rem',
-    fontSize: '1.2rem'
+    padding: '1rem', //padding
+    fontSize: '1.2rem',
+    textAlign: 'center'
 }
+
+//=========================================SKILLS=========
+
+const aboutContentIconStyle = {
+    width: '50px'
+}
+
+const aboutContentBackendIconStyle ={
+    width: '35px'
+}
+
+const skillsGridStyle = {
+    justifyContent: 'center',
+    gap: '1.1rem',
+    margin: '0 auto 1.6rem'
+}
+
+const emailSkillStyle = {
+    margin: '2rem 0', 
+    padding: '2rem 0',
+    borderTop: 'solid 1px rgb(220, 220, 220)', 
+    borderBottom: 'solid 1px rgb(220, 220, 220)'
+}
+
+//=========================================================
 
 const aboutButtonStyle = {
     position: 'relative',
@@ -59,19 +97,22 @@ const aboutButtonStyle = {
             backgroundColor: 'rgb(10, 33, 77)',
             border: 'solid white 3px',
             transition: '.3s'   
-        },
+        }
 }
 
 const aboutImageStyle = {
     position: 'relative',
     height: {
-        md: '34vh',
-        sm: '24vh',
-        xs: '34vh'
+        md: '40vh',
+        sm: '30vh',
+        xs: '30vh'
     },
     width: 'auto',
     borderRadius: '50%',
-    margin: '2rem',
+    margin: {
+        md: '2rem 0',
+        xs: '2rem 0 1.2rem'
+    },    
     caretColor: 'transparent',
     boxShadow: 'rgb(173, 173, 173) 1px 1px 7px',
 }
@@ -129,23 +170,107 @@ const About = () => {
                                 setAboutContent(false);
                             }}
                         >
-                        
                             <ArrowBackIosNewIcon sx={closeButtonStyle} />
                         </Button>
                     </Box>
                 
-                        <Box sx={aboutContentStyle}>
+                    <Box sx={aboutContentStyle}>
+                        <Box sx={aboutBioStyle}>
                             <Box 
                                 component="img"
                                 src={process.env.PUBLIC_URL + 'about-image.jpg'}
                                 alt="About Me Image"
                                 sx={aboutImageStyle}    
-                            />
+                            /><br />
                             <Typography sx={aboutContentTextStyle}>
-                                Thank you for stopping by!<br/> <br/> I like to develop functional, responsive websites. Strongly familiar with HTML, CSS, JavaScript and PHP. Experience with MySQL, MongoDB/Mongoose, Node/ExpressJS. Knowledge in ReactJS, PHP Laravel, WordPress and installing, working with frameworks and libraries. <br/>I'm always looking forward to a new project to
-                                tackle. Let me help your business grow! <br/> <br/>Professional and reliable.
+                                I am a Self-Taught Developer that likes to build functional, responsive Web Sites, Web Apps and Emails.
+                                Always looking forward to a new challenge. Professional and reliable.
                             </Typography>
                         </Box>
+                        <Typography sx={aboutContentTextStyle}>
+                            <Typography sx={{fontSize: '1.6rem', fontWeight: '600'}}>SKILLS</Typography><br/>
+                            <Grid container sx={skillsGridStyle} xs={8} md={12}>
+                                <Grid item>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/skills/html-5.png'} 
+                                        alt="HTML"
+                                        sx={aboutContentIconStyle} 
+                                    /><br/>HTML
+                                </Grid>
+                                <Grid item>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/skills/css-3.png'} 
+                                        alt="CSS"
+                                        sx={aboutContentIconStyle} 
+                                    /><br/>CSS
+                                </Grid>
+                                <Grid item>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/skills/js.png'} 
+                                        alt="JavaScript"
+                                        sx={aboutContentIconStyle} 
+                                    /><br/>JavaScript
+                                </Grid>
+                                <Grid item>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/skills/react.png'} 
+                                        alt="React.js"
+                                        sx={aboutContentIconStyle} 
+                                    /><br/>React
+                                </Grid>
+                                <Grid item>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/skills/php.png'} 
+                                        alt="PHP"
+                                        sx={aboutContentIconStyle} 
+                                    /><br/>PHP
+                                </Grid>
+                                <Grid item>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/skills/wordpress.png'} 
+                                        alt="WordPress"
+                                        sx={aboutContentIconStyle} 
+                                    /><br/>WordPress
+                                </Grid>
+                            </Grid>
+
+                            <Box sx={emailSkillStyle}> 
+                                <Box component="img" 
+                                    src={process.env.PUBLIC_URL + '/project-images/skills/email.png'}
+                                    alt="HTML Emails"
+                                    sx={aboutContentIconStyle}
+                                /><br/>
+                                Experienced HTML Email Developer
+                            </Box>
+                            
+                            <Box>
+                                Familiarity with API's and back-end programming<br />
+                                <Stack direction="row" spacing={2} justifyContent="center" sx={{margin: '.75rem 0 0'}}>
+                                    <div>
+                                        <Box component="img"
+                                            alt="MySQL"
+                                            src={process.env.PUBLIC_URL + '/project-images/skills/mysql.png'}
+                                            sx={aboutContentBackendIconStyle}
+                                        /><br />mySQL
+                                    </div>
+                                    <div>
+                                        <Box component="img"
+                                            alt="MongoDB"
+                                            src={process.env.PUBLIC_URL + '/project-images/skills/mongodb.png'}
+                                            sx={aboutContentBackendIconStyle}
+                                        /><br />MongoDB
+                                    </div>
+                                    <div>
+                                        <Box component="img"
+                                            alt="ExpressJS"
+                                            src={process.env.PUBLIC_URL + '/project-images/skills/express-js.png'}
+                                            sx={aboutContentBackendIconStyle}
+                                        /><br />Express
+                                    </div>
+                                </Stack>
+                            </Box>
+                        </Typography>
+                    </Box>
                     
                 </Box>
             </Fade>

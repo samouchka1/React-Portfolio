@@ -1,43 +1,68 @@
 import React from 'react';
 import {
-    Container, Typography
+    Box,
+    Container, 
+    Typography
 } from '@mui/material';
 import welcome from './welcome.jpg';
 
 const welcomeStyle = {
-    height: '78vh',
+    height: '85vh',
     width: '100%',
     // margin: '0 .5rem 0 .5rem',
-    margin: 'auto',
+    margin: {
+        md: '0 auto',
+        xs: '.7rem auto .15rem'   
+    },
     backgroundImage:`url(${welcome})`,
     backgroundSize: 'cover'
 }
 
-const welcomeTextStyle = {
+const welcomeTextAreaStyle = {
     position: 'relative',
     top: '33%',
+    width: {
+        md: '50%',
+        sm: '75%',
+        xs: '95%'
+    },
+    margin: '0 auto',
     textAlign: 'center',
+    padding: '.5rem',
+    borderRadius: '10px',
+    backgroundColor: 'rgba(30, 30, 30, 0.85)'
+}
+
+const welcomeTextStyle = {
     fontFamily: 'Monda',
     fontWeight: '600',
     color: 'rgb(185, 253, 121)',
     caretColor: 'transparent'
 }
 
+const welcomeSubTextStyle = {
+    paddingTop: '2rem',
+    fontWeight: '600',
+    textShadow: 'black 3px 3px 2px'
+}
+
 const Welcome = () => {
     return (
         <Container
             sx={welcomeStyle}
-            maxWidth={false} //this takes off default width limit
+            maxWidth={false}
         >
-            <Typography
-                variant="h3"
-                sx={welcomeTextStyle}
-            >
-            Greetings, I am Miguel.<br />
-                <Typography variant="h5" sx={{paddingTop: '2rem'}}>
-                    Web Developer for Hire
+            <Box sx={welcomeTextAreaStyle}>
+                <Typography
+                    variant="h3"
+                    sx={welcomeTextStyle}
+                >
+                    Greetings, I am Miguel.<br />
+                    <Typography variant="h5" sx={welcomeSubTextStyle}>
+                        Web and Email Developer for Hire
+                    </Typography>
                 </Typography>
-            </Typography>
+            </Box>
         </Container>
     )
 }

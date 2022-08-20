@@ -19,12 +19,17 @@ const pages = [
     path: '#about'
   },
   {
-    name: 'My Work',
+    name: 'Projects',
     path: '#projects'
   },
   {
+    name: 'Emails',
+    path: '#emails'
+  },
+  {
     name: 'Contact',
-    path: 'https://www.upwork.com/freelancers/~01c3683d82db31cfe6'
+    path: 'https://www.linkedin.com/in/miguel-chiozza-7a68a3236/'
+    // path: 'https://www.upwork.com/freelancers/~01c3683d82db31cfe6'
   }
 ]
 
@@ -38,12 +43,9 @@ const navBar = {
   justifyContent: {
     md: 'right',
     sm: 'right',
-    xs: 'center'
+    xs: 'space-around'
   },
-  height: {
-    md: 108,
-    xs: 75
-  },
+  height: 108,
   backgroundColor : 'primary',
   width: '100%',
   margin: {
@@ -57,7 +59,7 @@ const navLinks = {
   // textDecoration: 'none',
   color: 'white',
   fontSize : {
-    xs: '1.1rem',
+    xs: '1rem',
     md: '1.3rem'
   }
 }
@@ -68,12 +70,12 @@ const navLinksBorder = {
     '&:hover': {
       border: 'solid white 3px',
       transition: '.3s'
-    }
+    },
 }
 
 const NavBar = () => {
 
-  const hashLinks = pages.filter(hash => hash.path.includes('#'));
+  const hashLinks = pages.filter(hash => hash.path.includes('#')); //filter hashlinks
   const links = pages.filter(link => link.path.includes('https'));
   
   return (
@@ -96,6 +98,7 @@ const NavBar = () => {
                   </Typography>
                 </ListItem>
               ))}
+
             {links.map((page) => (
               <ListItem key={page}>
               <Typography noWrap sx={navLinksBorder}>

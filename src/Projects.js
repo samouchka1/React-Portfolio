@@ -18,7 +18,7 @@ const projects = [
         thumbnail: 'three-headed.jpg'
     },
     {
-        name: 'PHP using \'includes\'',
+        name: 'PHP Site using \'includes\'',
         path: 'http://samouchka.great-site.net/index.php',
         thumbnail: 'php.jpg'
     },
@@ -38,7 +38,7 @@ const projects = [
         thumbnail: 'react-todo-bg.jpg'
     },
     {
-        name: 'Wordpress Site',
+        name: 'WordPress Site',
         path: 'http://wordpress-site-1.great-site.net/',
         thumbnail: 'wp-1.jpg'
     },
@@ -87,6 +87,10 @@ const gridItemImageStyle = {
     }
 }
 
+// const sourceButtonStyle = {
+//     padding: '10% 0 0'
+// }
+
 return (
     <Grid container sx={gridStyle} id="projects">
         {projects.map((project) => (
@@ -103,10 +107,13 @@ return (
                             sx={gridItemImageStyle}
                         />
                     </Link>
+                    <Box>
+                        {/* <Link href={project.code} target='_blank' sx={sourceButtonStyle}>
+                            Source Code Button
+                        </Link> */}
+                    </Box>
             </Grid>
-
         ))}
-
     </Grid>
 )}
 

@@ -9,6 +9,7 @@ import Welcome from './Welcome';
 import About from './About';
 import Projects from './Projects';
 import Signature from './Signature';
+import Emails from './Emails';
 
 const theme =  createTheme({
   palette: {
@@ -32,6 +33,7 @@ const App = () => {
       <Welcome />
       <About />
       <Projects />
+      <Emails />
       <Signature />
     </ThemeProvider>
   );
