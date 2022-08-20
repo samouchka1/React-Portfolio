@@ -251,7 +251,7 @@ const About = () => {
                             
                             <Box>
                                 Familiarity with API's and back-end programming<br />
-                                <Stack direction="row" spacing={2} justifyContent="center" sx={{margin: '.75rem 0 0'}}>
+                                <Stack direction="row" spacing={2} justifyContent="center" sx={{margin: '.75rem 0 0', fontSize: '.96rem'}}>
                                     <div>
                                         <Box component="img"
                                             alt="MySQL"
