@@ -65,7 +65,10 @@ const navLinks = {
 }
 
 const navLinksBorder = {
-  padding: '2.2rem .5rem 2.2rem .5rem',
+  padding: {
+    md: '2.2rem .5rem',
+    xs: '2.4rem .45rem'  
+  },
   border: 'solid rgba(0, 0, 0, 0) 3px',
     '&:hover': {
       border: 'solid white 3px',

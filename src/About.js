@@ -21,6 +21,12 @@ const aboutContentAreaStyle = {
     margin: '.85rem 0 .7rem 0',
     backgroundColor: 'rgb(10, 33, 77)', //primary - doesn't want to import
     width: '100%',
+    border: 'solid rgb(0, 0, 0) 3px',
+        '&:hover': {
+            backgroundColor: 'rgb(10, 33, 77)',
+            border: 'solid white 3px',
+            transition: '.3s'   
+        }
 }
 
 const aboutContentStyle = {
