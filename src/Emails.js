@@ -34,7 +34,7 @@ const Emails = () => {
     const containerStyle = {
         width: '99%',
         textAlign: 'center',
-        margin: '6rem auto 2rem'
+        margin: '6rem auto 7rem'
     }
 
     const emailsHeaderStyle = {
