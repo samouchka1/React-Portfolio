@@ -18,7 +18,7 @@ const sourceButtonAreaStyle = {
     position: 'relative',
     width: 220,
     textAlign: 'center',
-    margin: '7rem auto 0',
+    margin: '13rem auto 0',
     padding: '.5rem',
     backgroundColor: 'rgba(83, 27, 157, 0.433)',
     borderRadius: '10px'

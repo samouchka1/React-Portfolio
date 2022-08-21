@@ -10,22 +10,26 @@ const emails = [
     {
         name: 'Responsive Email',
         path: 'https://samouchka1.github.io/HTML-email-responsive/',
-        thumbnail: 'responsive-thumbnail.JPG'
+        thumbnail: 'responsive-thumbnail.JPG',
+        source: 'https://github.com/samouchka1/HTML-email-responsive'
     },
     {
         name: 'Elite Charters',
         path: 'https://samouchka1.github.io/HTML-email-elite-charters/',
-        thumbnail: 'charters-thumbnail.JPG'
+        thumbnail: 'charters-thumbnail.JPG',
+        source: 'https://github.com/samouchka1/HTML-email-elite-charters'
     },
     {
         name: 'Paypal Clone',
         path: 'https://samouchka1.github.io/HTML-email-paypal-clone/',
-        thumbnail: 'paypal-thumbnail.JPG'
+        thumbnail: 'paypal-thumbnail.JPG',
+        source: 'https://github.com/samouchka1/HTML-email-paypal-clone'
     },
     {
         name: 'GNC Clone',
         path: 'https://samouchka1.github.io/HTML-email-gnc-clone/',
-        thumbnail: 'gnc-thumbnail.JPG'
+        thumbnail: 'gnc-thumbnail.JPG',
+        source: 'https://github.com/samouchka1/HTML-email-gnc-clone'
     },
 ]
 
@@ -34,7 +38,7 @@ const Emails = () => {
     const containerStyle = {
         width: '99%',
         textAlign: 'center',
-        margin: '6rem auto 7rem'
+        margin: '6rem auto'
     }
 
     const emailsHeaderStyle = {
@@ -76,7 +80,11 @@ const Emails = () => {
         color: 'white',
         textAlign: 'left',
         textShadow: '2px 2px 2px black',
-        top: '88%',
+        top: {
+            md: '70%',
+            sm: '75%',
+            xs: '67%'   
+        },
         left: '3%',
         fontSize: '1.3rem',
         fontWeight: '600',
@@ -103,6 +111,21 @@ const Emails = () => {
         }
     }
 
+    const sourceButtonAreaStyle = {
+        position: 'relative',
+        width: '100&',
+        textAlign: 'center',
+        margin: '1rem auto'
+    }
+    
+    const sourceButtonStyle = {
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        opacity: '.9',
+        '&:hover': {
+            opacity: '1'
+        }
+    }
+
     return (
         // Container maxWidth={false}
         <Box sx={containerStyle}  id="emails">
@@ -123,6 +146,17 @@ const Emails = () => {
                                     sx={gridItemImageStyle}
                                 />
                             </Link>
+
+                            <br/>
+                            <Box sx={sourceButtonAreaStyle}>
+                                <Link href={email.source} target='_blank' sx={sourceButtonStyle}>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
+                                        title={'Source code for ' + email.name}
+                                        sx={{width: '60px'}}    
+                                    />
+                                </Link>
+                            </Box>
                     </Grid>
         
                 ))}
