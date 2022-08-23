@@ -31,6 +31,12 @@ const emails = [
         thumbnail: 'gnc-thumbnail.JPG',
         source: 'https://github.com/samouchka1/HTML-email-gnc-clone'
     },
+    {
+        name: 'Columbia Clone',
+        path: 'https://samouchka1.github.io/HTML-email-columbia-clone/',
+        thumbnail: 'columbia-thumbnail.JPG',
+        source: 'https://github.com/samouchka1/HTML-email-columbia-clone'
+    }
 ]
 
 const Emails = () => {
