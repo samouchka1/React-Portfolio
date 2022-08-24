@@ -14,7 +14,7 @@ const aboutContentAreaStyle = {
     height: {
         md: 620,
         sm: 1160,
-        xs: 1220
+        xs: 1300
     },
     fontSize: '1.3rem',
     fontFamily: 'sans-serif',
@@ -216,6 +216,13 @@ const About = () => {
                                         alt="JavaScript"
                                         sx={aboutContentIconStyle} 
                                     /><br/>JavaScript
+                                </Grid>
+                                <Grid item>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/skills/jquery.png'} 
+                                        alt="jQuery"
+                                        sx={aboutContentIconStyle} 
+                                    /><br/>jQuery
                                 </Grid>
                                 <Grid item>
                                     <Box component="img" 

@@ -20,7 +20,7 @@ const projects = [
         source: 'https://github.com/samouchka1/dragon-site'
     },
     {
-        name: 'jQuery Random Quote Machine',
+        name: 'jQuery Quote Machine',
         path: 'https://random-quote-machine-jquery.netlify.app/',
         thumbnail: 'quotes.jpg',
         source: 'https://github.com/samouchka1/quote-machine'
