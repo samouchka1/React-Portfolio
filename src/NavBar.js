@@ -49,8 +49,8 @@ const navBar = {
   backgroundColor : 'primary',
   width: '100%',
   margin: {
-    md: '1rem 0 1rem 0',
-    xs: '.5rem 0 .5rem 0'
+    md: '1rem auto',
+    xs: '.5rem auto'
   }
 }
 
@@ -59,7 +59,7 @@ const navLinks = {
   // textDecoration: 'none',
   color: 'white',
   fontSize : {
-    xs: '1rem',
+    xs: '.95rem',
     md: '1.3rem'
   }
 }
@@ -67,7 +67,7 @@ const navLinks = {
 const navLinksBorder = {
   padding: {
     md: '2.2rem .5rem',
-    xs: '2.4rem .45rem'  
+    xs: '2.4rem 0'  
   },
   border: 'solid rgba(0, 0, 0, 0) 3px',
     '&:hover': {

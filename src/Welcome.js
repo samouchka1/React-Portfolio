@@ -35,6 +35,10 @@ const welcomeTextAreaStyle = {
 const welcomeTextStyle = {
     fontFamily: 'Monda',
     fontWeight: '600',
+    fontSize: {
+        md: '3rem',
+        xs: '2rem'
+    },
     color: 'rgb(185, 253, 121)',
     caretColor: 'transparent'
 }
@@ -42,6 +46,10 @@ const welcomeTextStyle = {
 const welcomeSubTextStyle = {
     paddingTop: '2rem',
     fontWeight: '600',
+    fontSize : {
+        md: '1.5rem',
+        xs: '1.2rem'
+    },
     textShadow: 'black 3px 3px 2px'
 }
 
@@ -52,12 +60,9 @@ const Welcome = () => {
             maxWidth={false}
         >
             <Box sx={welcomeTextAreaStyle}>
-                <Typography
-                    variant="h3"
-                    sx={welcomeTextStyle}
-                >
+                <Typography sx={welcomeTextStyle}>
                     Greetings, I am Miguel.<br />
-                    <Typography variant="h5" sx={welcomeSubTextStyle}>
+                    <Typography sx={welcomeSubTextStyle}>
                         Web and Email Developer for Hire
                     </Typography>
                 </Typography>

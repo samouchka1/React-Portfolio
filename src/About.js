@@ -14,7 +14,7 @@ const aboutContentAreaStyle = {
     height: {
         md: 620,
         sm: 1160,
-        xs: 1300
+        xs: 1520
     },
     fontSize: '1.3rem',
     fontFamily: 'sans-serif',
@@ -194,7 +194,7 @@ const About = () => {
                             </Typography>
                         </Box>
                         <Typography sx={aboutContentTextStyle}>
-                            <Typography sx={{fontSize: '1.6rem', fontWeight: '600'}}>SKILLS</Typography><br/>
+                            <Typography sx={{fontSize: '1.5rem', fontWeight: '600'}}>SKILLS</Typography><br/>
                             <Grid container sx={skillsGridStyle} xs={8} md={12}>
                                 <Grid item>
                                     <Box component="img" 
