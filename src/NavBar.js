@@ -87,7 +87,7 @@ const NavBar = () => {
         <Toolbar disableGutters>
           <List sx={{ display: 'flex'}}>
             {hashLinks.map((page) => (
-                <ListItem key={page}>
+                <ListItem key={page} sx={{padding: '0 .55rem'}}>
                   <Typography noWrap sx={navLinksBorder}>
                       <HashLink
                         style={{textDecoration: 'none'}}
