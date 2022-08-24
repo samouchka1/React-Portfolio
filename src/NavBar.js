@@ -63,7 +63,7 @@ const navLinks = {
     md: '1.3rem'
   },
   padding: {
-    xs: '.025rem'
+    xs: '.05rem'
   }
 }
 
