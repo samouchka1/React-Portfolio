@@ -4,7 +4,7 @@ import {
     Container, 
     Typography
 } from '@mui/material';
-import welcome from './welcome.jpg';
+// import welcome from './welcome.jpg';
 
 const welcomeStyle = {
     height: '85vh',
@@ -14,7 +14,7 @@ const welcomeStyle = {
         md: '0 auto',
         xs: '.7rem auto .15rem'   
     },
-    backgroundImage:`url(${welcome})`,
+    backgroundImage:`url(${process.env.PUBLIC_URL + 'welcome.jpg'})`,
     backgroundSize: 'cover'
 }
 
