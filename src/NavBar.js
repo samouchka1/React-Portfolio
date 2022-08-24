@@ -61,6 +61,9 @@ const navLinks = {
   fontSize : {
     xs: '.95rem',
     md: '1.3rem'
+  },
+  padding: {
+    xs: '.025rem'
   }
 }
 
