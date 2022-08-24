@@ -28,7 +28,7 @@ const pages = [
   },
   {
     name: 'Contact',
-    path: 'www.linkedin.com/in/mchio-7a68a3236'
+    path: 'https://www.linkedin.com/in/mchio-7a68a3236'
     // path: 'https://www.upwork.com/freelancers/~01c3683d82db31cfe6'
   }
 ]
