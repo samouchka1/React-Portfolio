@@ -84,7 +84,7 @@ const NavBar = () => {
   return (
   <Container maxWidth={false} sx={{justifyContent: 'center'}}>
       <AppBar sx={navBar}>
-        <Toolbar>
+        <Toolbar disableGutters>
           <List sx={{ display: 'flex'}}>
             {hashLinks.map((page) => (
                 <ListItem key={page}>
