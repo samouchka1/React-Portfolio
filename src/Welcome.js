@@ -4,7 +4,6 @@ import {
     Container, 
     Typography
 } from '@mui/material';
-// import welcome from './welcome.jpg';
 
 const welcomeStyle = {
     height: '85vh',
