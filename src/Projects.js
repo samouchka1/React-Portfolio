@@ -129,6 +129,7 @@ const sourceButtonStyle = {
     }
 }
 
+// filter projects with no source
 const source = projects.filter(yesSource => yesSource.source !== null);
 const noSrc = projects.filter(noSource => noSource.source === null);
 
