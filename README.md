@@ -1,1 +1,1 @@
-Portfolio remake using React with Material UI (under development)
+Portfolio using React.js with Material UI (under development)
