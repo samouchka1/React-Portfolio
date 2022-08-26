@@ -36,6 +36,12 @@ const emails = [
         path: 'https://samouchka1.github.io/HTML-email-columbia-clone/',
         thumbnail: 'columbia-thumbnail.JPG',
         source: 'https://github.com/samouchka1/HTML-email-columbia-clone'
+    },
+    {
+        name: 'Zoom Clone',
+        path: 'https://samouchka1.github.io/HTML-email-zoom-clone/',
+        thumbnail: 'zoom-thumbnail.JPG',
+        source: 'https://github.com/samouchka1/HTML-email-zoom-clone'
     }
 ]
 
