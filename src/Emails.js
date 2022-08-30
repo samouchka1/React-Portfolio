@@ -42,6 +42,12 @@ const emails = [
         path: 'https://samouchka1.github.io/HTML-email-zoom-clone/',
         thumbnail: 'zoom-thumbnail.JPG',
         source: 'https://github.com/samouchka1/HTML-email-zoom-clone'
+    },
+    {
+        name: 'DSG Clone',
+        path: 'https://samouchka1.github.io/HTML-email-dsg-clone/',
+        thumbnail: 'dsg-thumbnail.JPG',
+        source: 'https://github.com/samouchka1/HTML-email-dsg-clone'
     }
 ]
 
