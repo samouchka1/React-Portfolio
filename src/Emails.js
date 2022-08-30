@@ -3,7 +3,8 @@ import {
     Grid, 
     Link,
     Box,
-    Typography, 
+    Typography,
+    Tooltip 
 } from '@mui/material';
 
 const emails = [
@@ -167,13 +168,14 @@ const Emails = () => {
 
                             <br/>
                             <Box sx={sourceButtonAreaStyle}>
-                                <Link href={email.source} target='_blank' sx={sourceButtonStyle}>
-                                    <Box component="img" 
-                                        src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
-                                        title={'Source code for ' + email.name}
-                                        sx={{width: '60px'}}    
-                                    />
-                                </Link>
+                                <Tooltip title={'Source code for ' + email.name} placement="bottom">
+                                    <Link href={email.source} target='_blank' sx={sourceButtonStyle}>
+                                        <Box component="img" 
+                                            src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
+                                            sx={{width: '60px'}}    
+                                        />
+                                    </Link>
+                                </Tooltip>
                             </Box>
                     </Grid>
         
