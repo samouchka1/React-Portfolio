@@ -101,7 +101,7 @@ const gridItemImageStyle = {
         sm: 330,
         xs: 225
     },
-    opacity: '.9',
+    opacity: '.8',
     '&:hover': {
         opacity: '1',
         animationName: 'zoom',
