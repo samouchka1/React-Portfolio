@@ -29,13 +29,13 @@ const projects = [
     {
         name: 'PHP CRUD App',
         path: 'http://crudproject.great-site.net/index.php',
-        thumbnail: 'php-crud-warning.jpg',
+        thumbnail: 'php-crud.jpg',
         source: 'https://github.com/samouchka1/PHP-CRUD-app'
     },
     {
         name: 'PHP Login System',
         path: 'http://loginsystem.great-site.net/',
-        thumbnail: 'php-login-warning.jpg',
+        thumbnail: 'php-login.jpg',
         source: 'https://github.com/samouchka1/PHP-login-system'
     },
     {
@@ -47,7 +47,7 @@ const projects = [
     {
         name: 'WordPress Site',
         path: 'http://wordpress-site-1.great-site.net/',
-        thumbnail: 'wp-1-warning.jpg',
+        thumbnail: 'wp-1.jpg',
         source: null
     },
     {
