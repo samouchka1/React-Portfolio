@@ -40,9 +40,9 @@ const projects = [
     },
     {
         name: 'React To-do App',
-        path: 'https://todo-list-react-12.netlify.app/',
+        path: 'https://astounding-cat-dc4355.netlify.app/', //check name
         thumbnail: 'react-todo-bg.jpg',
-        source: 'https://github.com/samouchka1/React-Todo-App'
+        source: 'https://github.com/samouchka1/todo-app-mui'
     },
     {
         name: 'WordPress Site',
