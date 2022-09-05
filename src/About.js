@@ -14,7 +14,7 @@ const aboutContentAreaStyle = {
     height: {
         md: 620,
         sm: 1160,
-        xs: 1520
+        xs: 1430
     },
     fontSize: '1.3rem',
     fontFamily: 'sans-serif',
@@ -266,13 +266,13 @@ const About = () => {
                                             sx={aboutContentBackendIconStyle}
                                         /><br />mySQL
                                     </div>
-                                    <div>
+                                    {/* <div>
                                         <Box component="img"
                                             alt="MongoDB"
                                             src={process.env.PUBLIC_URL + '/project-images/skills/mongodb.png'}
                                             sx={aboutContentBackendIconStyle}
                                         /><br />MongoDB
-                                    </div>
+                                    </div> */}
                                     <div>
                                         <Box component="img"
                                             alt="ExpressJS"
