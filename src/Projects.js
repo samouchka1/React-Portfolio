@@ -21,12 +21,6 @@ const projects = [
         source: 'https://github.com/samouchka1/dragon-site'
     },
     {
-        name: 'jQuery Quote Machine',
-        path: 'https://random-quote-machine-jquery.netlify.app/',
-        thumbnail: 'quotes.jpg',
-        source: 'https://github.com/samouchka1/quote-machine'
-    },
-    {
         name: 'PHP CRUD App',
         path: 'http://crudproject.great-site.net/index.php',
         thumbnail: 'php-crud.jpg',
@@ -37,6 +31,12 @@ const projects = [
         path: 'http://loginsystem.great-site.net/',
         thumbnail: 'php-login.jpg',
         source: 'https://github.com/samouchka1/PHP-login-system'
+    },
+    {
+        name: 'React Quote Machine',
+        path: 'https://lively-hotteok-e6caba.netlify.app/', //check name
+        thumbnail: 'quotes.jpg',
+        source: 'https://github.com/samouchka1/react-quote-machine'
     },
     {
         name: 'React To-do App',
