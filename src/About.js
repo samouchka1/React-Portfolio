@@ -217,13 +217,13 @@ const About = () => {
                                         sx={aboutContentIconStyle} 
                                     /><br/>JavaScript
                                 </Grid>
-                                <Grid item>
+                                {/* <Grid item>
                                     <Box component="img" 
                                         src={process.env.PUBLIC_URL + '/project-images/skills/jquery.png'} 
                                         alt="jQuery"
                                         sx={aboutContentIconStyle} 
                                     /><br/>jQuery
-                                </Grid>
+                                </Grid> */}
                                 <Grid item>
                                     <Box component="img" 
                                         src={process.env.PUBLIC_URL + '/project-images/skills/react.png'} 
