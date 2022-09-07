@@ -11,14 +11,16 @@ import {
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const aboutContentAreaStyle = { 
-    height: {
-        md: 620,
-        sm: 1160,
-        xs: 1430
-    },
+    // height: {
+    //     md: 620,
+    //     sm: 1160,
+    //     xs: 1430
+    // },
+    contain: 'content',
     fontSize: '1.3rem',
     fontFamily: 'sans-serif',
     margin: '.85rem 0 .7rem 0',
+    padding: '.5rem 0 1.3rem',
     backgroundColor: 'rgb(10, 33, 77)', //primary - doesn't want to import
     width: '100%',
     border: 'solid rgb(0, 0, 0) 3px',
