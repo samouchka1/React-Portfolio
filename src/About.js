@@ -70,7 +70,12 @@ const skillsGridStyle = {
     margin: '0 auto 1.6rem'
 }
 
-const emailSkillStyle = {
+const sectionSkillStyle = {
+    display: 'flex',
+    gap: {
+        md: '2rem',
+        xs: '1rem'
+    },
     margin: '2rem 0', 
     padding: '2rem 0',
     borderTop: 'solid 1px rgb(220, 220, 220)', 
@@ -244,13 +249,25 @@ const About = () => {
                                 </Grid>
                             </Grid>
 
-                            <Box sx={emailSkillStyle}> 
-                                <Box component="img" 
-                                    src={process.env.PUBLIC_URL + '/project-images/skills/email.png'}
-                                    alt="HTML Emails"
-                                    sx={aboutContentIconStyle}
-                                /><br/>
-                                Experienced HTML Email Developer
+                            <Box sx={sectionSkillStyle}>
+                                <div>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/skills/email.png'}
+                                        alt="HTML Emails"
+                                        sx={aboutContentIconStyle}
+                                    />
+                                    <br/>
+                                    HTML Email Development
+                                </div>
+                                <div>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/skills/g-analytics.png'}
+                                        alt="Google Analytics"
+                                        sx={aboutContentIconStyle}
+                                    />
+                                    <br/>
+                                    Google Analytics
+                                </div>
                             </Box>
                             
                             <Box>
