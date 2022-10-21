@@ -15,12 +15,6 @@ const projects = [
         source: 'https://github.com/samouchka1/model-site'
     },
     {
-        name: 'Dragon Theme Site',
-        path: 'https://samouchka1.github.io/dragon-site/index.html',
-        thumbnail: 'three-headed.jpg',
-        source: 'https://github.com/samouchka1/dragon-site'
-    },
-    {
         name: 'PHP CRUD App',
         path: 'http://crudproject.great-site.net/index.php',
         thumbnail: 'php-crud.jpg',
@@ -43,6 +37,12 @@ const projects = [
         path: 'https://astounding-cat-dc4355.netlify.app/', //check name
         thumbnail: 'react-todo-bg.jpg',
         source: 'https://github.com/samouchka1/todo-app-mui'
+    },
+    {
+        name: 'React eCommerce Site',
+        path: 'https://beamish-sfogliatella-2eb23a.netlify.app/',
+        thumbnail: 'StoreSite.png',
+        source: 'https://github.com/samouchka1/storesite'
     },
     {
         name: 'WordPress Site',
