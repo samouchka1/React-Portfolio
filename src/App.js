@@ -4,12 +4,12 @@ import { createTheme } from '@mui/material/styles';
 import { 
   green 
 } from '@mui/material/colors';
-import NavBar from './NavBar';
-import Welcome from './Welcome';
-import About from './About';
-import Projects from './Projects';
-import Signature from './Signature';
-import Emails from './Emails';
+import NavBar from './components/NavBar';
+import Welcome from './components/Welcome';
+import About from './components/About';
+import Projects from './components/Projects';
+import Signature from './components/Signature';
+import Emails from './components/Emails';
 
 const theme =  createTheme({
   palette: {
