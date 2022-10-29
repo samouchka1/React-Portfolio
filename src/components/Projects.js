@@ -6,6 +6,8 @@ import {
     Typography,
     Tooltip, 
 } from '@mui/material';
+// import { Slide, Fade } from "react-awesome-reveal";
+
 
 const projects = [
     {
@@ -141,29 +143,33 @@ return (
         {source.map((project) => (
 
             <Grid item xs={8} md={3} key={project}>
-                    <Typography sx={gridItemTextStyle}>
-                        {project.name}
-                    </Typography>
-                    <Link href={project.path} target='_blank'>
-                        <Box
-                            component="img" 
-                            src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
-                            alt={project.name}
-                            sx={gridItemImageStyle}
-                        />
-                    </Link>
+                {/* <Slide direction="up" triggerOnce>
+                    <Fade cascade triggerOnce> */}
+                        <Typography sx={gridItemTextStyle}>
+                            {project.name}
+                        </Typography>
+                        <Link href={project.path} target='_blank'>
+                            <Box
+                                component="img" 
+                                src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
+                                alt={project.name}
+                                sx={gridItemImageStyle}
+                            />
+                        </Link>
 
-                    <br/>
-                    <Box sx={sourceButtonAreaStyle}>
-                        <Tooltip title={'Source code for ' + project.name} placement="bottom">
-                            <Link href={project.source} target='_blank' sx={sourceButtonStyle}>
-                                <Box component="img" 
-                                    src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
-                                    sx={{width: '60px'}}    
-                                />
-                            </Link>
-                        </Tooltip>
-                    </Box>
+                        <br/>
+                        <Box sx={sourceButtonAreaStyle}>
+                            <Tooltip title={'Source code for ' + project.name} placement="bottom">
+                                <Link href={project.source} target='_blank' sx={sourceButtonStyle}>
+                                    <Box component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
+                                        sx={{width: '60px'}}    
+                                    />
+                                </Link>
+                            </Tooltip>
+                        </Box>
+                    {/* </Fade>
+                </Slide> */}
             </Grid>
         ))}
 

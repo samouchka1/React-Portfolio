@@ -5,11 +5,12 @@ import {
   green 
 } from '@mui/material/colors';
 import NavBar from './components/NavBar';
-import Welcome from './components/Welcome';
+// import Welcome from './components/Welcome';
 import About from './components/About';
 import Projects from './components/Projects';
 import Signature from './components/Signature';
 import Emails from './components/Emails';
+import Banner from './components/Banner';
 
 const theme =  createTheme({
   palette: {
@@ -30,7 +31,8 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <NavBar />
-      <Welcome />
+      <Banner />
+      {/* <Welcome /> */}
       <About />
       <Projects />
       <Emails />

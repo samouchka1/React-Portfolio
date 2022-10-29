@@ -54,6 +54,11 @@ const welcomeSubTextStyle = {
 }
 
 const Welcome = () => {
+
+    const changeBackground = (e) => {
+        e.target.style.backgroundColor = 'rgba(30, 30, 30)';
+    }
+
     return (
         <Container
             sx={welcomeStyle}
