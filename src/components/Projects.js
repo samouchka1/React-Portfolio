@@ -136,14 +136,14 @@ const sourceButtonStyle = {
 }
 
 // filter projects with no source
-const source = projects.filter(yesSource => yesSource.source !== null);
-const noSrc = projects.filter(noSource => noSource.source === null);
+const sources = projects.filter(yes => yes.source !== null);
+const noSources = projects.filter(no => no.source === null);
 
 return (
 
     <Grid container sx={gridStyle} id="projects">
 
-        {source.map((project) => (
+        {sources.map((project) => (
 
             <Grid item xs={8} md={3} key={project}>
                 <Fade cascade 
@@ -184,7 +184,7 @@ return (
             </Grid>
         ))}
 
-        {noSrc.map((project) => (
+        {noSources.map((project) => (
 
             <Grid item xs={8} md={3} key={project}>
                 <Fade cascade 
