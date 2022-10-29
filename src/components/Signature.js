@@ -18,7 +18,7 @@ const sourceButtonAreaStyle = {
     position: 'relative',
     width: 220,
     textAlign: 'center',
-    margin: '13rem auto 0',
+    margin: '6rem auto 0',
     padding: '.5rem',
     backgroundColor: 'rgba(83, 27, 157, 0.433)',
     borderRadius: '10px'
@@ -32,11 +32,12 @@ const sourceButtonStyle = {
     }
 }
 
-const sourceTextStyle = {
-    color: 'rgb(193, 158, 238)',
-    textAlign: 'center',
-    caretColor: 'transparent'
-}
+// const sourceTextStyle = {
+//     color: 'rgb(193, 158, 238)',
+//     textAlign: 'center',
+//     caretColor: 'transparent',
+//     fontSize : '.85rem'
+// }
 
 
 const Signature = () => {
@@ -51,9 +52,9 @@ const Signature = () => {
                         sx={{width: '60px'}}    
                     />
                 </Link>
-                <Typography sx={sourceTextStyle}>
+                {/* <Typography sx={sourceTextStyle}>
                     source code for this portfolio
-                </Typography>
+                </Typography> */}
             </Box>
             
 

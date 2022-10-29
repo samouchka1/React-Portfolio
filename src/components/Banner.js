@@ -27,7 +27,7 @@ const welcomeTextAreaStyle = {
         animationFillMode: 'forwards',
         '@keyframes zoom' : {
             '0%': { transform: 'scale(1.0035)'},
-            '100%' : { transform: 'scale(1.05)'}
+            '100%' : { transform: 'scale(1.04)'}
         }
     }
 }
@@ -57,13 +57,13 @@ const Banner = () => {
   return (
     <Container maxWidth={false}>
         <ParallaxBanner style={{ aspectRatio: '2 / 1' }}>
-            <ParallaxBannerLayer image={process.env.PUBLIC_URL + 'welcome.jpg'} speed={-30} />
+            <ParallaxBannerLayer image={process.env.PUBLIC_URL + 'welcome.jpg'} speed={-40} />
             <Slide direction="up" style={{position: 'relative', top: '36%'}}>
                 <Box sx={welcomeTextAreaStyle}>
                     <Typography sx={welcomeTextStyle}>
                         Greetings, I am Miguel.<br />
                         <Typography sx={welcomeSubTextStyle}>
-                            Web and Email Developer for Hire
+                            Web Developer for Hire
                         </Typography>
                     </Typography>
                 </Box>

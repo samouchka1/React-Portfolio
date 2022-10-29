@@ -6,7 +6,7 @@ import {
     Typography,
     Tooltip, 
 } from '@mui/material';
-// import { Slide, Fade } from "react-awesome-reveal";
+import { Slide, Fade } from "react-awesome-reveal";
 
 
 const projects = [
@@ -64,36 +64,39 @@ const Projects = () => {
 
 const gridStyle = {
     justifyContent: 'center',
-    gap: '1.1rem'
+    gap: '1.1rem',
+    marginTop: '1.5rem'
 }
 
 const gridItemTextStyle = {
     position: 'relative',
     color: 'white',
-    textShadow: '3px 3px 4px black',
-    top: {
-        md: '70%',
-        sm: '75%',
-        xs: '67%'   
-    },
-    left: '3%',
+    // textShadow: '3px 3px 4px black',
+    // top: {
+    //     md: '70%',
+    //     sm: '75%',
+    //     xs: '67%'   
+    // },
+    // left: '3%',
+    textAlign: 'center',
     fontSize: '1.3rem',
-    fontWeight: '600',
+    fontWeight: '500',
     zIndex: '1'
 }
 
 const gridItemNoSrcTextStyle = { //Project name text position for no-source list
     position: 'relative',
     color: 'white',
-    textShadow: '3px 3px 4px black',
-    top: { // this
-        md: '86%',
-        sm: '90%',
-        xs: '86%'
-    },
-    left: '3%',
+    // textShadow: '3px 3px 4px black',
+    // top: { // this
+    //     md: '86%',
+    //     sm: '90%',
+    //     xs: '86%'
+    // },
+    // left: '3%',
+    textAlign: 'center',
     fontSize: '1.3rem',
-    fontWeight: '600',
+    fontWeight: '500',
     zIndex: '1'
 }
 
@@ -112,7 +115,7 @@ const gridItemImageStyle = {
         animationFillMode: 'forwards',
         '@keyframes zoom' : {
             '0%': { transform: 'scale(1.0035)'},
-            '100%' : { transform: 'scale(1.05)'}
+            '100%' : { transform: 'scale(1.04)'}
         }
     }
 }
@@ -121,7 +124,7 @@ const sourceButtonAreaStyle = {
     position: 'relative',
     width: '100&',
     textAlign: 'center',
-    margin: '1rem auto'
+    margin: '.5rem auto'
 }
 
 const sourceButtonStyle = {
@@ -143,50 +146,69 @@ return (
         {source.map((project) => (
 
             <Grid item xs={8} md={3} key={project}>
-                {/* <Slide direction="up" triggerOnce>
-                    <Fade cascade triggerOnce> */}
-                        <Typography sx={gridItemTextStyle}>
-                            {project.name}
-                        </Typography>
-                        <Link href={project.path} target='_blank'>
-                            <Box
-                                component="img" 
-                                src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
-                                alt={project.name}
-                                sx={gridItemImageStyle}
-                            />
-                        </Link>
+                <Fade cascade 
+                    damping={0}
+                    triggerOnce
+                >
+                    <Slide direction="up" 
+                        triggerOnce
+                    >
+                        <div>
+                            <Link href={project.path} target='_blank'>
+                                <Box
+                                    component="img" 
+                                    src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
+                                    alt={project.name}
+                                    sx={gridItemImageStyle}
+                                />
+                            </Link>
+                            <Typography sx={gridItemTextStyle}>
+                                {project.name}
+                            </Typography>
 
-                        <br/>
-                        <Box sx={sourceButtonAreaStyle}>
-                            <Tooltip title={'Source code for ' + project.name} placement="bottom">
-                                <Link href={project.source} target='_blank' sx={sourceButtonStyle}>
-                                    <Box component="img" 
-                                        src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
-                                        sx={{width: '60px'}}    
-                                    />
-                                </Link>
-                            </Tooltip>
-                        </Box>
-                    {/* </Fade>
-                </Slide> */}
+                            {/* <br/> */}
+                            <Box sx={sourceButtonAreaStyle}>
+                                <Tooltip title={'Source code for ' + project.name} placement="bottom">
+                                    <Link href={project.source} target='_blank' sx={sourceButtonStyle}>
+                                        <Box component="img" 
+                                            src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
+                                            sx={{width: '60px'}}    
+                                        />
+                                    </Link>
+                                </Tooltip>
+                            </Box>
+                        </div>
+
+                    </Slide>
+                </Fade>
             </Grid>
         ))}
 
         {noSrc.map((project) => (
 
             <Grid item xs={8} md={3} key={project}>
-                    <Typography sx={gridItemNoSrcTextStyle}>
-                        {project.name}
-                    </Typography>
-                    <Link href={project.path} target='_blank'>
-                        <Box
-                            component="img" 
-                            src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
-                            alt={project.name}
-                            sx={gridItemImageStyle}
-                        />
-                    </Link>
+                <Fade cascade 
+                    damping={0}
+                    triggerOnce
+                >
+                    <Slide direction="up" 
+                        triggerOnce
+                    >
+                        <div>
+                            <Link href={project.path} target='_blank'>
+                                <Box
+                                    component="img" 
+                                    src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
+                                    alt={project.name}
+                                    sx={gridItemImageStyle}
+                                />
+                            </Link>
+                            <Typography sx={gridItemNoSrcTextStyle}>
+                                {project.name}
+                            </Typography>
+                        </div>
+                    </Slide>
+                </Fade>
             </Grid>
         ))}
 

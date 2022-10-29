@@ -22,10 +22,10 @@ const pages = [
     name: 'Projects',
     path: '#projects'
   },
-  {
-    name: 'Emails',
-    path: '#emails'
-  },
+  // {
+  //   name: 'Emails',
+  //   path: '#emails'
+  // },
   {
     name: 'Contact',
     path: 'https://www.linkedin.com/in/mchio-7a68a3236'

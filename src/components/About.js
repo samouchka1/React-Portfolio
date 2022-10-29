@@ -72,6 +72,7 @@ const skillsGridStyle = {
 
 const sectionSkillStyle = {
     display: 'flex',
+    justifyContent: 'center',
     gap: {
         md: '2rem',
         xs: '1rem'
@@ -191,7 +192,7 @@ const About = () => {
                                 sx={aboutImageStyle}    
                             /><br />
                             <Typography sx={aboutContentTextStyle}>
-                                I am a Self-Taught Developer that likes to build functional, responsive Web Sites, Web Apps and Emails.
+                                I am a Self-Taught Developer that likes to build functional, responsive Web Sites and Apps.
                                 Always looking forward to a new challenge. Professional and reliable.
                             </Typography>
                         </Box>
@@ -250,7 +251,7 @@ const About = () => {
                             </Grid>
 
                             <Box sx={sectionSkillStyle}>
-                                <div>
+                                {/* <div>
                                     <Box component="img" 
                                         src={process.env.PUBLIC_URL + '/project-images/skills/email.png'}
                                         alt="HTML Emails"
@@ -258,12 +259,12 @@ const About = () => {
                                     />
                                     <br/>
                                     HTML Email Development
-                                </div>
+                                </div> */}
                                 <div>
                                     <Box component="img" 
                                         src={process.env.PUBLIC_URL + '/project-images/skills/g-analytics.png'}
                                         alt="Google Analytics"
-                                        sx={aboutContentIconStyle}
+                                        sx={{width: '45px'}}
                                     />
                                     <br/>
                                     Google Analytics
