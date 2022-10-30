@@ -59,7 +59,7 @@ const navLinks = {
   // textDecoration: 'none',
   color: 'white',
   fontSize : {
-    xs: '.95rem',
+    xs: '1.1rem',
     md: '1.3rem'
   }
 }

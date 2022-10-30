@@ -56,7 +56,7 @@ const welcomeSubTextStyle = {
 const Banner = () => {
   return (
     <Container maxWidth={false}>
-        <ParallaxBanner style={{ aspectRatio: '2 / 1' }}>
+        <ParallaxBanner style={{ aspectRatio: '2 / 1', height: '90vh'}}>
             <ParallaxBannerLayer image={process.env.PUBLIC_URL + 'welcome.jpg'} speed={-40} />
             <Slide direction="up" style={{position: 'relative', top: '36%'}}>
                 <Box sx={welcomeTextAreaStyle}>

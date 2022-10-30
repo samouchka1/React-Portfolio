@@ -91,7 +91,10 @@ const aboutButtonStyle = {
     caretColor: 'transparent',
     color: 'white',
     backgroundColor: 'rgb(10, 33, 77)', //primary - doesn't want to import
-    fontSize: '1.5rem',
+    fontSize: {
+        md: '1.5rem',
+        xs: '1.1rem'
+    },
     fontFamily: 'sans-serif',
     fontWeight: '600',
     textTransform: 'none',
