@@ -32,12 +32,12 @@ const sourceButtonStyle = {
     }
 }
 
-// const sourceTextStyle = {
-//     color: 'rgb(193, 158, 238)',
-//     textAlign: 'center',
-//     caretColor: 'transparent',
-//     fontSize : '.85rem'
-// }
+const sourceTextStyle = {
+    color: 'rgb(193, 158, 238)',
+    textAlign: 'center',
+    caretColor: 'transparent',
+    fontSize : '.85rem'
+}
 
 
 const Signature = () => {
@@ -52,9 +52,9 @@ const Signature = () => {
                         sx={{width: '60px'}}    
                     />
                 </Link>
-                {/* <Typography sx={sourceTextStyle}>
+                <Typography sx={sourceTextStyle}>
                     source code for this portfolio
-                </Typography> */}
+                </Typography>
             </Box>
             
 
