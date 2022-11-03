@@ -145,7 +145,7 @@ return (
 
         {sources.map((project) => (
 
-            <Grid item xs={8} md={3} key={project}>
+            <Grid item xs={8} md={3} key={project} sx={{maxWidth: '90%', flexGrow: 1}}>
                 <Fade cascade 
                     damping={0}
                     triggerOnce
@@ -186,7 +186,7 @@ return (
 
         {noSources.map((project) => (
 
-            <Grid item xs={8} md={3} key={project}>
+            <Grid item xs={8} md={3} key={project} sx={{maxWidth: '90%', flexGrow: 1}}>
                 <Fade cascade 
                     damping={0}
                     triggerOnce
