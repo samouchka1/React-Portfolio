@@ -14,8 +14,8 @@ const aboutContentAreaStyle = {
     height: 'auto',
     fontSize: '1.3rem',
     fontFamily: 'sans-serif',
-    margin: '.85rem 0 .7rem 0',
-    padding: '.5rem 0 1.3rem',
+    margin: '1.3rem 0 .7rem 0',
+    padding: '1rem 0 1.3rem',
     backgroundColor: 'rgb(10, 33, 77)', //primary - doesn't want to import
     width: '100%',
     border: 'solid rgb(0, 0, 0) 3px',
@@ -101,8 +101,8 @@ const aboutButtonStyle = {
     borderRadius: 0,
     padding: '1.6rem',
     margin: {
-        md: '1rem 0 0 0',
-        xs: '.5rem 0 0 0'
+        md: '1.3rem 0 0 0',
+        xs: '1rem 0 0 0'
     },
     border: 'solid rgb(0, 0, 0) 3px',
         '&:hover': {
@@ -254,7 +254,7 @@ const About = () => {
                             </Grid>
 
                             <Box sx={sectionSkillStyle}>
-                                {/* <div>
+                                <div>
                                     <Box component="img" 
                                         src={process.env.PUBLIC_URL + '/project-images/skills/email.png'}
                                         alt="HTML Emails"
@@ -262,7 +262,7 @@ const About = () => {
                                     />
                                     <br/>
                                     HTML Email Development
-                                </div> */}
+                                </div>
                                 <div>
                                     <Box component="img" 
                                         src={process.env.PUBLIC_URL + '/project-images/skills/g-analytics.png'}

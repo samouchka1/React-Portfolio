@@ -60,7 +60,6 @@ const projects = [
     }
 ]
 
-const Projects = () => {
 
 const gridStyle = {
     justifyContent: 'center',
@@ -134,6 +133,8 @@ const sourceButtonStyle = {
         opacity: '1'
     }
 }
+
+const Projects = () => {
 
 // filter projects with no source
 const sources = projects.filter(yes => yes.source !== null);

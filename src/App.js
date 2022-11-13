@@ -9,7 +9,7 @@ import Banner from './components/Banner';
 import About from './components/About';
 import Projects from './components/Projects';
 import Signature from './components/Signature';
-// import Emails from './components/Emails';
+import Emails from './components/Emails';
 
 const theme =  createTheme({
   palette: {
@@ -33,7 +33,7 @@ const App = () => {
       <Banner />
       <About />
       <Projects />
-      {/* <Emails /> */}
+      <Emails />
       <Signature />
     </ThemeProvider>
   );
