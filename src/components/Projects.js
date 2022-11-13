@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {
+    useState
+} from 'react';
 import { 
     Grid, 
     Link,
     Box,
     Typography,
-    Tooltip, 
+    Tooltip,
+    Container,
+    Button, 
 } from '@mui/material';
 import { Slide, Fade } from "react-awesome-reveal";
 
@@ -134,86 +138,136 @@ const sourceButtonStyle = {
     }
 }
 
+const projectButtonStyle = {
+    position: 'relative',
+    display: 'block',
+    width: '100%',
+    caretColor: 'transparent',
+    color: 'white',
+    backgroundColor: 'rgb(10, 33, 77)', //primary - doesn't want to import
+    fontSize: {
+        md: '1.5rem',
+        xs: '1.1rem'
+    },
+    fontFamily: 'sans-serif',
+    fontWeight: '600',
+    textTransform: 'none',
+    borderRadius: 0,
+    padding: '1.6rem',
+    margin: {
+        md: '1rem auto',
+        xs: '1rem auto'
+    },
+    border: 'solid rgb(0, 0, 0) 3px',
+        '&:hover': {
+            backgroundColor: 'rgb(10, 33, 77)',
+            border: 'solid white 3px',
+            transition: '.3s'   
+        }
+}
+
 const Projects = () => {
 
 // filter projects with no source
 const sources = projects.filter(yes => yes.source !== null);
 const noSources = projects.filter(no => no.source === null);
 
+const [projectItems, setProjects] = useState(true);
+const handleToggle = () => {
+    setProjects(!projectItems)
+}
+
+const ProjectsGrid = () => {
+
+    return (
+        <Grid container sx={gridStyle} id="projects">
+
+            {sources.map((project) => (
+
+                <Grid item xs={8} md={3} key={project} sx={{maxWidth: '80%', flexGrow: 1}}>
+                    <Fade cascade 
+                        damping={0}
+                        triggerOnce
+                    >
+                        <Slide direction="up" 
+                            triggerOnce
+                        >
+                            <div>
+                                <Link href={project.path} target='_blank'>
+                                    <Box
+                                        component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
+                                        alt={project.name}
+                                        sx={gridItemImageStyle}
+                                    />
+                                </Link>
+                                <Typography sx={gridItemTextStyle}>
+                                    {project.name}
+                                </Typography>
+
+                                {/* <br/> */}
+                                <Box sx={sourceButtonAreaStyle}>
+                                    <Tooltip title={'Source code for ' + project.name} placement="bottom">
+                                        <Link href={project.source} target='_blank' sx={sourceButtonStyle}>
+                                            <Box component="img" 
+                                                src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
+                                                sx={{width: '60px'}}    
+                                            />
+                                        </Link>
+                                    </Tooltip>
+                                </Box>
+                            </div>
+
+                        </Slide>
+                    </Fade>
+                </Grid>
+            ))}
+
+            {noSources.map((project) => (
+
+                <Grid item xs={8} md={3} key={project} sx={{maxWidth: '80%', flexGrow: 1}}>
+                    <Fade cascade 
+                        damping={0}
+                        triggerOnce
+                    >
+                        <Slide direction="up" 
+                            triggerOnce
+                        >
+                            <div>
+                                <Link href={project.path} target='_blank'>
+                                    <Box
+                                        component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
+                                        alt={project.name}
+                                        sx={gridItemImageStyle}
+                                    />
+                                </Link>
+                                <Typography sx={gridItemNoSrcTextStyle}>
+                                    {project.name}
+                                </Typography>
+                            </div>
+                        </Slide>
+                    </Fade>
+                </Grid>
+            ))}
+
+        </Grid>
+    )
+}
+
 return (
 
-    <Grid container sx={gridStyle} id="projects">
-
-        {sources.map((project) => (
-
-            <Grid item xs={8} md={3} key={project} sx={{maxWidth: '80%', flexGrow: 1}}>
-                <Fade cascade 
-                    damping={0}
-                    triggerOnce
-                >
-                    <Slide direction="up" 
-                        triggerOnce
-                    >
-                        <div>
-                            <Link href={project.path} target='_blank'>
-                                <Box
-                                    component="img" 
-                                    src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
-                                    alt={project.name}
-                                    sx={gridItemImageStyle}
-                                />
-                            </Link>
-                            <Typography sx={gridItemTextStyle}>
-                                {project.name}
-                            </Typography>
-
-                            {/* <br/> */}
-                            <Box sx={sourceButtonAreaStyle}>
-                                <Tooltip title={'Source code for ' + project.name} placement="bottom">
-                                    <Link href={project.source} target='_blank' sx={sourceButtonStyle}>
-                                        <Box component="img" 
-                                            src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
-                                            sx={{width: '60px'}}    
-                                        />
-                                    </Link>
-                                </Tooltip>
-                            </Box>
-                        </div>
-
-                    </Slide>
-                </Fade>
-            </Grid>
-        ))}
-
-        {noSources.map((project) => (
-
-            <Grid item xs={8} md={3} key={project} sx={{maxWidth: '80%', flexGrow: 1}}>
-                <Fade cascade 
-                    damping={0}
-                    triggerOnce
-                >
-                    <Slide direction="up" 
-                        triggerOnce
-                    >
-                        <div>
-                            <Link href={project.path} target='_blank'>
-                                <Box
-                                    component="img" 
-                                    src={process.env.PUBLIC_URL + '/project-images/' + project.thumbnail} 
-                                    alt={project.name}
-                                    sx={gridItemImageStyle}
-                                />
-                            </Link>
-                            <Typography sx={gridItemNoSrcTextStyle}>
-                                {project.name}
-                            </Typography>
-                        </div>
-                    </Slide>
-                </Fade>
-            </Grid>
-        ))}
-
-    </Grid>
+    <Container maxWidth={false}>
+        <Button
+            id="projects" 
+            sx={projectButtonStyle}
+            onClick={handleToggle}
+        >
+            Projects
+        </Button>
+        {projectItems === true ? <ProjectsGrid /> : undefined}
+    </Container>
+    
 )}
 
 export default Projects;

@@ -258,7 +258,7 @@ const About = () => {
                                     <Box component="img" 
                                         src={process.env.PUBLIC_URL + '/project-images/skills/email.png'}
                                         alt="HTML Emails"
-                                        sx={aboutContentIconStyle}
+                                        sx={{width: '45px'}}
                                     />
                                     <br/>
                                     HTML Email Development
@@ -310,7 +310,7 @@ const About = () => {
 
     return (
 
-        <Container>
+        <Container maxWidth={false}>
                 <Box id="about">
                     {showAboutButton ? <AboutButton /> : null}
                     {showAboutContent ? <AboutContent /> : null}

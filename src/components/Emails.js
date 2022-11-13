@@ -118,10 +118,7 @@ const sourceButtonStyle = {
 const emailButtonStyle = {
     position: 'relative',
     display: 'block',
-    width: {
-        md: '78.15%',
-        xs: '99%'
-    },
+    width: '100%',
     caretColor: 'transparent',
     color: 'white',
     backgroundColor: 'rgb(10, 33, 77)', //primary - doesn't want to import
@@ -135,8 +132,8 @@ const emailButtonStyle = {
     borderRadius: 0,
     padding: '1.6rem',
     margin: {
-        md: '5rem auto 0 auto',
-        xs: '4rem auto 0 auto'
+        md: '1rem auto',
+        xs: '1rem auto'
     },
     border: 'solid rgb(0, 0, 0) 3px',
         '&:hover': {
@@ -147,59 +144,59 @@ const emailButtonStyle = {
 }
 const Emails = () => {
 
-    const [emailItems, setEmails] = useState(false);
-    const handleToggler = () => {
-        setEmails(!emailItems)
-    }
+const [emailItems, setEmails] = useState(false);
+const handleToggle = () => {
+    setEmails(!emailItems)
+}
 
-    const EmailsGrid = () => {
+const EmailsGrid = () => {
 
-        return (
-            <Grid container sx={gridStyle}>
+    return (
+        <Grid container sx={gridStyle}>
 
-                {emails.map((email) => (
+            {emails.map((email) => (
 
-                    <Grid item xs={8} md={3} key={email} sx={{maxWidth: '80%', flexGrow: 1}}>
-                        <Fade cascade 
-                            damping={0}
+                <Grid item xs={8} md={3} key={email} sx={{maxWidth: '80%', flexGrow: 1}}>
+                    <Fade cascade 
+                        damping={0}
+                        triggerOnce
+                    >
+                        <Slide direction="up" 
                             triggerOnce
                         >
-                            <Slide direction="up" 
-                                triggerOnce
-                            >
-                                <div>
-                                    <Link href={email.path} target='_blank'>
-                                        <Box
-                                            component="img" 
-                                            src={process.env.PUBLIC_URL + '/project-images/emails/' + email.thumbnail} 
-                                            alt={email.name}
-                                            sx={gridItemImageStyle}
-                                        />
-                                    </Link>
-                                    <Typography sx={gridItemTextStyle}>
-                                        {email.name}
-                                    </Typography>
+                            <div>
+                                <Link href={email.path} target='_blank'>
+                                    <Box
+                                        component="img" 
+                                        src={process.env.PUBLIC_URL + '/project-images/emails/' + email.thumbnail} 
+                                        alt={email.name}
+                                        sx={gridItemImageStyle}
+                                    />
+                                </Link>
+                                <Typography sx={gridItemTextStyle}>
+                                    {email.name}
+                                </Typography>
 
-                                    {/* <br/> */}
-                                    <Box sx={sourceButtonAreaStyle}>
-                                        <Tooltip title={'Source code for ' + email.name} placement="bottom">
-                                            <Link href={email.source} target='_blank' sx={sourceButtonStyle}>
-                                                <Box component="img" 
-                                                    src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
-                                                    sx={{width: '60px'}}    
-                                                />
-                                            </Link>
-                                        </Tooltip>
-                                    </Box>
-                                </div>
+                                {/* <br/> */}
+                                <Box sx={sourceButtonAreaStyle}>
+                                    <Tooltip title={'Source code for ' + email.name} placement="bottom">
+                                        <Link href={email.source} target='_blank' sx={sourceButtonStyle}>
+                                            <Box component="img" 
+                                                src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
+                                                sx={{width: '60px'}}    
+                                            />
+                                        </Link>
+                                    </Tooltip>
+                                </Box>
+                            </div>
 
-                            </Slide>
-                        </Fade>
-                    </Grid>
-                ))}
-            </Grid>
-        )
-    }
+                        </Slide>
+                    </Fade>
+                </Grid>
+            ))}
+        </Grid>
+    )
+}
 
     return (
 
@@ -207,7 +204,7 @@ const Emails = () => {
             <Button
                 id="emails" 
                 sx={emailButtonStyle}
-                onClick={handleToggler}
+                onClick={handleToggle}
             >
                 Emails
             </Button>
