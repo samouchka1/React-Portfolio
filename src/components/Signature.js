@@ -49,7 +49,7 @@ const Signature = () => {
                         src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
                         title="Source code for this portfolio"
                         alt="Source code for this portfolio"
-                        sx={{width: '60px'}}    
+                        sx={{width: {md: '50px', xs: '45px'}}}    
                     />
                 </Link>
                 <Typography sx={sourceTextStyle}>

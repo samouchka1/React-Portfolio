@@ -102,7 +102,6 @@ const gridItemImageStyle = {
 
 const sourceButtonAreaStyle = {
     position: 'relative',
-    width: '100&',
     textAlign: 'center',
     margin: '1rem auto'
 }
@@ -183,7 +182,7 @@ const EmailsGrid = () => {
                                         <Link href={email.source} target='_blank' sx={sourceButtonStyle}>
                                             <Box component="img" 
                                                 src={process.env.PUBLIC_URL + '/project-images/source-icon.png'}
-                                                sx={{width: '60px'}}    
+                                                sx={{width: {md: '50px', xs: '45px'}}}    
                                             />
                                         </Link>
                                     </Tooltip>
