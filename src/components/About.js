@@ -244,13 +244,13 @@ const About = () => {
                                         sx={aboutContentIconStyle} 
                                     /><br/>PHP
                                 </Grid>
-                                <Grid item>
+                                {/* <Grid item>
                                     <Box component="img" 
                                         src={process.env.PUBLIC_URL + '/project-images/skills/wordpress.png'} 
                                         alt="WordPress"
                                         sx={aboutContentIconStyle} 
                                     /><br/>WordPress
-                                </Grid>
+                                </Grid> */}
                             </Grid>
 
                             <Box sx={sectionSkillStyle}>

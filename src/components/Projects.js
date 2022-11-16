@@ -50,12 +50,12 @@ const projects = [
         thumbnail: 'StoreSite.png',
         source: 'https://github.com/samouchka1/storesite'
     },
-    {
-        name: 'WordPress Site',
-        path: 'http://wordpress-site-1.great-site.net/',
-        thumbnail: 'wp-1.jpg',
-        source: null
-    },
+    // {
+    //     name: 'WordPress Site',
+    //     path: 'http://wordpress-site-1.great-site.net/',
+    //     thumbnail: 'wp-1.jpg',
+    //     source: null
+    // },
     {
         name: 'Github',
         path: 'https://github.com/samouchka1',
