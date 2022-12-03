@@ -26,12 +26,12 @@ const projects = [
         thumbnail: 'php-login.jpg',
         source: 'https://github.com/samouchka1/PHP-login-system'
     },
-    {
-        name: 'React Quote Machine',
-        path: 'https://lively-hotteok-e6caba.netlify.app/', //check name
-        thumbnail: 'quotes.jpg',
-        source: 'https://github.com/samouchka1/react-quote-machine'
-    },
+    // {
+    //     name: 'React Quote Machine',
+    //     path: 'https://lively-hotteok-e6caba.netlify.app/', //check name
+    //     thumbnail: 'quotes.jpg',
+    //     source: 'https://github.com/samouchka1/react-quote-machine'
+    // },
     {
         name: 'React To-do App',
         path: 'https://astounding-cat-dc4355.netlify.app/', //check name
@@ -49,6 +49,12 @@ const projects = [
         path: 'https://beamish-sfogliatella-2eb23a.netlify.app/',
         thumbnail: 'StoreSite.png',
         source: 'https://github.com/samouchka1/storesite'
+    },
+    {
+        name: 'React CoolBikes site',
+        path: 'https://clinquant-pixie-1ec08f.netlify.app/',
+        thumbnail: 'coolbikes.jpg',
+        source: 'https://github.com/samouchka1/coolbikes'
     },
     // {
     //     name: 'WordPress Site',
