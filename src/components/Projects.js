@@ -14,18 +14,7 @@ import { Slide, Fade } from "react-awesome-reveal";
 
 
 const projects = [
-    {
-        name: 'PHP CRUD App',
-        path: 'http://crudproject.great-site.net/index.php',
-        thumbnail: 'php-crud.jpg',
-        source: 'https://github.com/samouchka1/PHP-CRUD-app'
-    },
-    {
-        name: 'PHP Login System',
-        path: 'http://loginsystem.great-site.net/',
-        thumbnail: 'php-login.jpg',
-        source: 'https://github.com/samouchka1/PHP-login-system'
-    },
+    
     // {
     //     name: 'React Quote Machine',
     //     path: 'https://lively-hotteok-e6caba.netlify.app/', //check name
@@ -62,6 +51,18 @@ const projects = [
     //     thumbnail: 'wp-1.jpg',
     //     source: null
     // },
+    {
+        name: 'PHP CRUD App',
+        path: 'http://crudproject.great-site.net/index.php',
+        thumbnail: 'php-crud.jpg',
+        source: 'https://github.com/samouchka1/PHP-CRUD-app'
+    },
+    {
+        name: 'PHP Login System',
+        path: 'http://loginsystem.great-site.net/',
+        thumbnail: 'php-login.jpg',
+        source: 'https://github.com/samouchka1/PHP-login-system'
+    },
     {
         name: 'Github',
         path: 'https://github.com/samouchka1',
